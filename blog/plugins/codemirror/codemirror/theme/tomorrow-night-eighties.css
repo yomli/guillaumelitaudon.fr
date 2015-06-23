@@ -1,0 +1,59 @@
+/*
+
+    Name:       Tomorrow Night - Eighties
+    Author:     Chris Kempson
+
+    CodeMirror template by Jan T. Sott (https://github.com/idleberg/base16-codemirror)
+    Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
+
+*/
+
+
+.cm-s-tomorrow-night-eighties.CodeMirror {background: #1D1F21; color: #C5C8C6;}
+.cm-s-tomorrow-night-eighties div.CodeMirror-selected {background: #373B41 !important;}
+.cm-s-tomorrow-night-eighties .CodeMirror-gutters {background: #1D1F21; border-right: 0px;}
+.cm-s-tomorrow-night-eighties .CodeMirror-linenumber {color: #4B4E55;}
+.cm-s-tomorrow-night-eighties .CodeMirror-cursor {border-left: 1px solid #C5C8C6 !important;}
+
+.cm-s-tomorrow-night-eighties span.cm-error {background: #282A2E; color: #D02000;}
+.cm-s-tomorrow-night-eighties .CodeMirror-activeline-background {background: #282A2E !important;}
+.cm-s-tomorrow-night-eighties .CodeMirror-matchingbracket { text-decoration: underline; color: white !important;}
+
+.cm-s-tomorrow-night-eighties span.cm-comment {color: #999999;}
+.cm-s-tomorrow-night-eighties span.cm-atom {color: #8abeb7;}
+
+.cm-s-tomorrow-night-eighties span.cm-keyword { color: #AEB2F8; }
+.cm-s-tomorrow-night-eighties span.cm-variable { color: #AEB2F8; }
+.cm-s-tomorrow-night-eighties span.cm-variable-2 { color: #BEBF55; }
+.cm-s-tomorrow-night-eighties span.cm-variable-3 { color: #DE8E30; }
+.cm-s-tomorrow-night-eighties span.cm-bracket { color: #f8f8f2; }
+.cm-s-tomorrow-night-eighties span.cm-link { color: #ae81ff; }
+
+/* Tomorrow Red */
+.cm-s-tomorrow-night-eighties span.cm-tag { color: #cc6666; }
+
+/* Tomorrow Orange */
+.cm-s-tomorrow-night-eighties span.cm-number {color: #de935f;}
+.cm-s-tomorrow-night-eighties span.cm-qualifier,.cm-s-tomorrow-night-eighties span.cm-builtin { color: #de935f; }
+
+/* Tomorrow Yellow */
+.cm-s-tomorrow-night-eighties span.cm-attribute { color: #f0c674; }
+
+/* Tomorrow Green */
+.cm-s-tomorrow-night-eighties span.cm-string { color: #b5bd68; }
+
+ 
+.cm-s-tomorrow-night-eighties span.cm-comment { color: rgb(158,162,157); }
+.cm-s-tomorrow-night-eighties span.cm-atom { color: #845dc4; }
+.cm-s-tomorrow-night-eighties span.cm-number { color: rgb(255,147,0); }
+.cm-s-tomorrow-night-eighties span.cm-keyword { color: rgb(166,100,185); }
+.cm-s-tomorrow-night-eighties span.cm-string { color: rgb(122,161,0); }
+.cm-s-tomorrow-night-eighties span.cm-meta { color: rgb(3,171,177); }
+.cm-s-tomorrow-night-eighties span.cm-variable-2, .cm-s-tomorrow-night-eighties span.cm-tag { color: #cc6666; }
+.cm-s-tomorrow-night-eighties span.cm-variable-3, .cm-s-tomorrow-night-eighties span.cm-def { color: rgb(218,174,0); }
+.cm-s-tomorrow-night-eighties span.cm-error { color: rgb(231,15,33); }
+.cm-s-tomorrow-night-eighties span.cm-bracket { color: rgb(0, 0%, 50%); }
+.cm-s-tomorrow-night-eighties span.cm-builtin, .cm-s-tomorrow-night-eighties span.cm-special { color:rgb(67,130,191); }
+.cm-s-tomorrow-night-eighties span.cm-link { color: rgb(67,130,191); }
+.cm-s-tomorrow-night-eighties span.cm-operator { color: rgb(124,124,124); }
+.cm-s-tomorrow-night-eighties span.cm-property { color: #81a2be; }

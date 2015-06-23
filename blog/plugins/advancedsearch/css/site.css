@@ -1,0 +1,101 @@
+/*  styles pour advancedsearch */
+#searchpool, #searchlist, #searchresult{
+border:1px solid #888;
+border-radius:5px;
+}
+#searchpool>div>span, #searchlist>div>span{display:inline-block;}
+
+#searchpool legend, #searchlist legend, #searchresult legend{
+text-align:center;
+border-bottom:1px dotted #888;
+padding:5px;
+font-weight:bold;
+width:100%;
+}
+#searchpool>div, #searchlist>div, #searchresult>div{
+margin:5px;
+}
+#searchpool div span{
+cursor:pointer;
+padding:1px 5px;
+background:#ccc;
+border:1px solid #aaa;
+border-radius:2px;
+margin:2px 5px;
+}
+#searchpool div span:hover{
+background:#8cc;
+}
+#searchlist,#searchresult{margin:10px 0;}
+.sl-del{cursor:pointer;}
+.sl-lbl{display:inline;}
+#searchlist>div>span.sl-itm:first-of-type div.sl-ou{display:none;}
+#searchlist div span.sl-itm{
+margin:2px 5px;
+}
+#searchlist div span.sl-itm span{
+padding:1px 1px 1px 5px;
+background:#cfc;
+border:1px solid #0c0;
+border-radius:2px;
+display:inline-block;
+}
+#searchlist div span.sl-itm span.hover{
+background-color:#c88;
+border-color:#f44;
+color:#fff;
+}
+#searchlist div span.sl-itm div.sl-del{
+width:16px;
+height:16px;
+vertical-align: text-bottom;
+margin-left:3px;
+display: inline-block;
+background:url(advancedsearch/images/del.png) no-repeat center center;
+}
+#searchlist div span.sl-itm div.sl-ou{
+width:16px;
+height:16px;
+vertical-align: text-bottom;
+cursor:pointer;
+margin-right:5px;
+background:url(advancedsearch/images/ou.png) no-repeat center center;
+display: inline-block;
+}
+#searchlist div span.sl-itm div.sl-ou.hover{
+background-image:url(advancedsearch/images/et.png);
+}
+#searchlist div div.sl-et{
+margin-right:5px;
+width:16px;
+height:16px;
+vertical-align:text-bottom;
+display: inline-block;
+background:url(advancedsearch/images/et.png) no-repeat center center;
+}
+#searchlist>div:first-of-type div.sl-et{display:none;}
+#searchlist,#searchresult{display:none;}
+
+.quick_search input{
+width:100%;
+background:url(advancedsearch/images/search.png) no-repeat right center;
+color:#aaa;
+border:1px solid #888;
+border-radius:2px;
+}
+.quick_search input.focus{
+width:100%;
+background:none;
+color:#000;
+}
+div.loading #searchresultnb{
+padding:4px;
+background:url(advancedsearch/images/loading.gif) no-repeat center center;
+}
+div.loading #searchresultbox{
+background:url(advancedsearch/images/loading.gif) no-repeat center center;
+}
+div.error #searchresultbox{
+background-color:#fdd;
+}
+#searchresultend{clear:both;}

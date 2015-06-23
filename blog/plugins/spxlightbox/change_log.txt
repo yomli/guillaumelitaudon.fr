@@ -1,0 +1,8 @@
+﻿
+**** v 1.1. ****
+- add fresco
+- optimisation du loadin du css et du js
+
+
+***v1.0***
+- First release.

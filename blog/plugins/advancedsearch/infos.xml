@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<title><![CDATA[Advanced Search]]></title>
+	<author><![CDATA[Sébastien H.]]></author>
+	<version>1.3</version>
+	<date>07/05/2015</date>
+	<site></site>
+	<description><![CDATA[Plugin permettant de faire des recherches multicritères sur son blog. Affichage dynamique des résultats en AJAX]]></description>
+	<requirements></requirements>
+</document>

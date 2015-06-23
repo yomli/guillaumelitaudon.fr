@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <title><![CDATA[CodeMirror]]></title>
+    <author><![CDATA[Jean-Pierre Pourrez]]></author>
+    <version>1.07</version>
+    <date>05/04/2014</date>
+    <site>http://www.kazimentou.fr</site>
+    <description><![CDATA[Plugin pour CodeMirror v3.22. Editeur de code avec coloration syntaxique, auto-complétion et repli de code (folding).]]></description>
+</document>

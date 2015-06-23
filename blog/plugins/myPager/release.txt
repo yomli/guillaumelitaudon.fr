@@ -1,0 +1,20 @@
+#2014/04/26
+ - bugfix: correction calcul page suivante quand on est sur la dernière page. Idem 1ère page. + msg alerte
+
+#2014/03/30
+ - ajout d'un navigateur d'articles (version 5.1)
+
+#2014/03/25
+ - Ajout option pour saisir un numéro de page
+
+#2014/03/20
+- test avec 150 Fables de la Fontaine comme articles
+- Révision du calcul de l'url dans private function urlPage($numero)
+pour prendre en compte la gestion du mode categorie, tags, archives
+- Ajout panneau de config
+option pour afficher "<<" et ">>", le mot "page"
+choix de la valeur pour $delta dans public function plxShowPagination($params), valeur par défaut: 3
+- retouches cosmétiques dans les propriétés CSS
+
+#2014/03/18
+Version initiale
