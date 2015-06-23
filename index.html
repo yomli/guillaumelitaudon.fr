@@ -20,23 +20,22 @@
 
 <body id="top">
 
-	<!-- Header -->
 	<header id="header">
 		<h1><a href="index.html">Guillaume Litaudon</a></h1>
 		<a href="#nav" class="nav icon fa-bars"> &nbsp;Menu</a>
 	</header>
 
-	<!-- Nav -->
 	<nav id="nav">
 		<ul class="links">
 			<li><a href="#curriculum">Curriculum</a></li>
 			<li><a href="#portfolio">Portfolio</a></li>
 			<li><a href="#contact">Contact</a></li>
 		</ul>
+
 		<ul class="links">
-			<li><a href="http://www.guillaumelitaudon.fr/blog/">Blog</a></li>
-			<li><a href="http://www.guillaumelitaudon.fr/liens/">Liens</a></li>
-			<li><a href="http://www.guillaumelitaudon.fr/contact/">vCard</a></li>
+			<li><a href="./blog/">Blog</a></li>
+			<li><a href="./liens/">Liens</a></li>
+			<li><a href="./contact/">vCard</a></li>
 		</ul>
 	</nav>
 
@@ -368,7 +367,7 @@
 				.data("origWidth", $(this).val())
 				.val(0)
 				.animate({
-      					value: $(this).data("origWidth") // or + "%" if fluid
+      					value: $(this).data("origWidth")
       				}, 1200);
 			});
 
