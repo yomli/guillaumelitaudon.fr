@@ -1,0 +1,248 @@
+/*********************************************************************************/
+/* guillaumelitaudon.fr by Guillaume Litaudon                                    */
+/* guillaume.litaudon@gmail.com                                                  */
+/* User-defined style start here.                                                */
+/*********************************************************************************/
+
+ul {
+	list-style-type: none;
+}
+
+abbr {
+	border-bottom:1px dashed #222;
+	cursor:help;
+}
+
+figcaption {
+	margin-bottom:2em;
+}
+
+article {
+	margin-bottom:3.5em;
+}
+
+table tbody tr {
+	border: none;
+}
+
+table tbody tr:nth-child(2n + 1) {
+	background-color: #fff;
+}
+
+table tbody td:nth-child(2n + 1) {
+	width:5%;
+}
+
+
+#page {
+	background-color:#3B3B3B;
+}
+
+#main {
+	background-color:#fff;
+	padding-left:2em;
+}
+
+#sidebar aside {
+	position:fixed;
+	top:3.5em;
+	z-index: 10001;
+	width:10em;
+}
+
+#sidebar aside h2 {
+	color:#D5D5D5;
+	font-size:1.2em;
+	padding-left:1.2em;
+	padding-top:1.2em;
+
+}
+
+#sidebar aside ul a {
+	color:#D5D5D5;
+	text-decoration: none;
+	-moz-transition: color 0.2s ease-in-out;
+	-webkit-transition: color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
+	display: inline-block;
+}
+
+#sidebar aside ul a:hover {
+	color:#fff;
+	text-decoration: none;
+}
+
+#portfolio figure {
+	position:relative;
+}
+
+.no-touch #portfolio figcaption {
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	padding:2em;
+	opacity:0 ;
+	text-align: center;
+	color:#D5D5D5;
+	background-color:#3B3B3B;
+	border-radius: 4px;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	-moz-transition: -moz-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+.no-touch #portfolio figure:hover > figcaption {
+	opacity:1;
+}
+
+#portfolio figure a {
+	display:block;
+	margin-top:2em;
+}
+
+@media screen and (max-width: 736px){
+	#sidebar aside {
+		display: none;
+	}
+}
+
+.other li {
+	border-radius: 4px;
+	border: solid 1px rgba(144, 144, 144, 0.25);
+	display:inline-block;
+	border-radius: 6px;
+	box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.015);
+	box-shadow: 0px 3px 0px 0px rgba(0,0,0,0.05);
+	border-radius: 4px;
+	border: solid 1px rgba(144, 144, 144, 0.25);
+	margin-bottom: 2em;
+	padding: 1.5em;
+	width: 20%;
+}
+
+/*********************************************************************************/
+/* Progress                                                                      */
+/*********************************************************************************/
+
+progress {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	display: block;
+	height:1.2em;
+	width:100%;
+	background-color: rgba(144, 144, 144, 0.075);
+	color: #5a5a5a;
+	border-radius: 4px;
+	border: solid 1px rgba(144, 144, 144, 0.25);
+}
+
+progress.primary {
+	color: #A6D267;
+}
+
+progress::-webkit-progress-bar {
+	background-color: rgba(144, 144, 144, 0.075);
+	border-radius: 4px;
+}
+
+progress::-webkit-progress-value {
+	background-color:  #5a5a5a;
+	border-radius: 4px;
+	border: solid 1px rgba(144, 144, 144, 0.25);
+}
+
+progress::-moz-progress-bar {
+	background-color: #5a5a5a;
+	border-radius: 4px;
+	border: solid 1px rgba(144, 144, 144, 0.25);
+}
+
+progress.primary::-webkit-progress-value {
+	background-color: #A6D267;
+}
+
+progress.primary::-moz-progress-bar {
+	background-color: #A6D267;
+}
+
+/* Un fallback pour IE */
+.progress {
+	height: 1.2em;
+	position: relative;
+	background: rgba(144, 144, 144, 0.075);
+	border-radius: 4px;
+	border: solid 1px rgba(144, 144, 144, 0.25);
+}
+
+.progress > span {
+	display: block;
+	height: 100%;
+	overflow:hidden;
+	position: relative;
+	background-color:#5a5a5a;
+	border-radius: 4px;
+	border: solid 1px rgba(144, 144, 144, 0.25);
+	animation: move 2s linear expandWidth;
+}
+
+.primary > .progress > span {
+	background-color:#A6D267;
+}
+
+/*********************************************************************************/
+/* Tags                                                                          */
+/*********************************************************************************/
+ul.inline {
+	margin:0;
+}
+
+.inline li {
+	display: inline-block;
+	background-color: #5a5a5a;
+	color:#fff;
+	padding:4px;
+	margin:2px;
+	border-radius: 4px;
+	border: solid 1px rgba(144, 144, 144, 0.25);
+}
+
+.inline li.primary {
+		background-color: #A6D267;
+}
+
+/*********************************************************************************/
+/* History                                                                       */
+/*********************************************************************************/
+.history > span {
+	display:inline-block;
+	background-color: #5a5a5a;
+	color:#fff;
+	padding:4px;
+	margin:2px;
+	border-radius: 4px;
+	border: solid 1px rgba(144, 144, 144, 0.25);
+	float:right;
+   	margin-top:-1.5em;
+}
+
+.history > span  ~ p {
+   	clear:both;
+   	margin-left:2em;
+}
+
+h5 {
+	font-size: 1em;
+	margin:0;
+	margin-right:10em;
+}
+
+h5 span {
+	font-weight: normal;
+}

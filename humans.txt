@@ -1,0 +1,27 @@
+   _  _          __                     _ _ 
+ _| || |_       / /   _  ___  _ __ ___ | (_)
+|_  ..  _|     / / | | |/ _ \| '_ ` _ \| | |
+|_      _|  _ / /| |_| | (_) | | | | | | | |
+  |_||_|   (_)_/  \__, |\___/|_| |_| |_|_|_|
+                  |___/ 
+
+/* TEAM */
+
+	Web developper: Guillaume Litaudon
+	Contact: guillaume.litaudon [at] gmail.com
+	Twitter: @_yomli
+	From: Blois, France
+    							
+/* THANKS */
+
+	Moxie Nethack: Krister Lagerström
+	GitHub: kl7107
+
+	Special thanks to my family for their continued support.
+
+/* SITE */
+
+	Doctype: HTML5
+	Componants: jQuery, Skel Baseline
+	CMS: PluXML, Shaarli
+	IDE: Sublime Text, The GIMP, Inkscape, FileZilla
