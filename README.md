@@ -1,6 +1,6 @@
 # guillaumelitaudon.fr
 
-This is my homepage sources.
+This is the sources of my homepage : [http://www.guillaumelitaudon.fr/](http://www.guillaumelitaudon.fr/)
 
 ## License
 Licensed under the terms of the MIT-Beerware license.
