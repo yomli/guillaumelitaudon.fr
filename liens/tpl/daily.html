@@ -29,7 +29,7 @@
                 </aside>
 
                 <header class="8u 12u$(small)">
-                    <h3 class="dailyTitle">The Daily Yomli</h3>
+                    <h3 class="dailyTitle">The Daily {$shaarlititle|htmlspecialchars}</h3>
                     <div class="dailyDate">
                         <span class="nomobile">————</span> {$day} <span class="nomobile">————</span>
                     </div>
@@ -73,7 +73,7 @@
                 {/loop}
             </div>        
             {else}
-            <div class="nothing">Ce jour-là, Yomli a dormi.</div>
+            <div class="nothing">Ce jour-là, l'auteur a dormi.</div>
             {/if}
         </div>
         <pre>
@@ -85,7 +85,7 @@
         </pre>
 
         <div>
-            <span class="green">yomli@daily</span>
+            <span class="green">{$shaarlititle|htmlspecialchars}@daily</span>
             <span class="blue">~ $ </span>
         </div>
     </div>
