@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>{include="includes"}</head>
+<body id="top" onload="document.changetag.fromtag.focus();">
+	{include="page.header"}
+
+
+	<article role="article">
+
+		<header>
+			<h2>Gestion des tags</h2>
+		</header>
+
+		
+		
+		<form method="POST" action="" name="changetag" id="changetag">
+			<input type="hidden" name="token" value="{$token}">
+			Tag&nbsp;: <input type="text" name="fromtag" id="fromtag">
+			<input type="text" name="totag" style="margin-left:40px;"><br />
+			<input type="submit" name="renametag" value="Renommer" class="button">
+			&nbsp;&nbsp;ou&nbsp; <input type="submit" name="deletetag" value="Supprimer" class="button" onClick="return confirmDeleteTag();"><br>(Case sensitive)</form>
+			<script language="JavaScript">function confirmDeleteTag() { var agree=confirm("Êtes-vous certain(e) de supprimer ce tag de tous les liens ?"); if (agree) return true ; else return false ; }</script>
+			
+
+		</article>
+
+		
+		{include="page.footer"}
+		{if="($GLOBALS['config']['OPEN_SHAARLI'] || isLoggedIn()) && empty($GLOBALS['disablejquery'])"}
+		<script src="inc/jquery-ui.min.js#"></script>
+		<script type="text/javascript">
+			$(document).ready(function()
+			{
+				$('#fromtag').autocomplete({source:'{$source}?ws=singletag',minLength:1});
+			});
+		</script>
+		{/if}
+	</body>
+	</html>

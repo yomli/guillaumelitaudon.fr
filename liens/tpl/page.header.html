@@ -1,0 +1,52 @@
+{if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}
+{ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
+{else}
+<!-- Header -->
+<header id="header">
+<h1><a href="?"># ./yomli</a></h1>
+	<a href="#nav" class="nav icon fa-bars"> &nbsp;Menu</a>
+</header>
+
+<!-- Nav -->
+<nav id="nav">
+	<ul class="links">
+		<li><a href="?" class="nomobile">Accueil</a></li>
+		<li><a href="?do=tagcloud">Tags</a></li>
+		<li><a href="?do=picwall{$searchcrits}">Mur d'images</a></li>
+		<li><a href="?do=daily">La quotidienne</a></li>
+		{if="isLoggedIn()"}
+		<li><a href="?do=addlink">Ajouter un lien</a></li>
+		<li><a href="?do=tools">Outils</a></li>
+		<li><a href="?do=logout">Déconnexion</a></li>
+		{elseif="$GLOBALS['config']['OPEN_SHAARLI']"}
+		<li><a href="?do=addlink">Ajouter un lien</a></li>
+		<li><a href="?do=tools">Outils</a></li>
+		{/if}
+		<li>
+		   <form method="GET" class="searchform" name="searchform">
+			<input type="text" id="searchform_value" name="searchterm" value="" placeholder="Rechercher">
+		</form>
+	</li>
+	<li>
+		<form method="GET" class="tagfilter" name="tagfilter">
+			<input type="text" name="searchtags" id="tagfilter_value" value="" placeholder="Filtrer par tag">
+		</form>
+	</li>
+</ul>
+
+<ul class="links">
+	<li><a href="http://www.guillaumelitaudon.fr/">CV</a></li>
+	<li><a href="http://www.guillaumelitaudon.fr/blog/">Blog</a></li>
+	<li><a href="http://www.guillaumelitaudon.fr/contact/">Contact</a></li>
+</ul>
+</nav>
+{/if}
+ <div id="page" class="container row">
+		<div id="cool-img" class="3u 0u$(small)">
+			<div class="box alt">
+			</div>
+		</div>
+
+		<div id="main" class="9u 12u$(small)">
+
+			<div id="content">

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>{include="includes"}</head>
+<body id="top">
+	{include="page.header"}
+
+
+	<article role="article">
+
+		<header>
+			<h2>Mur d'images</h2>
+		</header>
+
+
+		<div id="picwall">
+			{loop="linksToDisplay"}
+			<span class="picture" title="{$value.title|htmlspecialchars}">{$value.thumbnail}</span>
+		{/loop}
+	</div>
+
+
+</article>
+
+{include="page.footer"}
+{if="empty($GLOBALS['disablejquery'])"}
+<script src="inc/jquery-ui.min.js#"></script>
+<script src="inc/jquery.lazyload.min.js#"></script> 
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("img.lazyimage").show().lazyload();
+	});
+</script>
+{/if} 
+</body>
+</html>

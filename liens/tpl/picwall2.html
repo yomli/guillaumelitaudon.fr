@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>{include="includes"}</head>
+<body id="top">
+	{include="page.header"}
+
+
+	<article role="article">
+
+		<header>
+			<h2>Mur d'images</h2>
+		</header>
+
+		
+		{loop="linksToDisplay"}
+		<div style="float:left;width:48%;border-right:2px solid white;height:120px;overflow:hide;">
+			<div style="float:left;width:120px;text-align:center">{$value.thumbnail}</div>
+			<a href="{$value.permalink}" style="color:yellow;font-weight:bold;text-decoration:none;">{$value.title|htmlspecialchars}</a><br>
+			<span style="font-size:8pt;color:#eee;">{$value.description|htmlspecialchars}</span>
+			<div style="clear:both;"></div>
+		</div><br>
+		{/loop}
+		
+	</article>
+
+	{include="page.footer"}
+</body>
+</html>

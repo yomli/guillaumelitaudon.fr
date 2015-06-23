@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>{include="includes"}</head>
+<body id="top">
+    {include="page.header"}
+
+    <article role="article">
+
+        <header>
+            <h2>La quotidienne</h2>
+        </header>
+
+        <div class="daily">
+
+            <div class="row 100%">
+                <aside class="dailyAbout 4u 12u$(small)">
+                    Tous les liens du jour<br /> en une seule page.<br />
+                    {if="$previousday"}
+                    &lt;<a href="?do=daily&amp;day={$previousday}">Jour précédent</a>
+                    {else}
+                    &lt;Jour précédent
+                    {/if} - {if="$nextday"}
+                    <a href="?do=daily&amp;day={$nextday}">Jour suivant</a>&gt;
+                    {else}
+                    Jour suivant&gt;
+                    {/if}
+                    <br /><br />
+                    <a href="?do=dailyrss" title="Une entrée RSS par jour" class="icon my-fa-rss"> Flux RSS de la quotidienne</a>
+                </aside>
+
+                <header class="8u 12u$(small)">
+                    <h3 class="dailyTitle">The Daily Yomli</h3>
+                    <div class="dailyDate">
+                        <span class="nomobile">————</span> {$day} <span class="nomobile">————</span>
+                    </div>
+                </header>
+
+            </div>
+
+            <div class="row 100%">
+              {if="$linksToDisplay"}
+              <div id="daily_col1" class="4u 12u$(small)">
+                {loop="col1"}
+                <div class="dailyEntry">
+                    {if="$value.tags"}
+                    <div class="dailyEntryTags">{loop="value.taglist"}{$value|htmlspecialchars} - {/loop}</div>{/if}
+                    <div class="dailyEntryTitle"><a href="{$value.url}">{$value.title|htmlspecialchars}</a></div>
+                    {if="$value.thumbnail"}<div class="dailyEntryThumbnail">{$value.thumbnail}</div>{/if}
+                    <div class="dailyEntryDescription">{$value.formatedDescription}</div>
+                </div>
+                {/loop}
+            </div>
+
+            <div id="daily_col2" class="4u 12u$(small)">
+                {loop="col2"}
+                <div class="dailyEntry">
+                    {if="$value.tags"}<div class="dailyEntryTags">{loop="value.taglist"}{$value|htmlspecialchars} - {/loop}</div>{/if}
+                    <div class="dailyEntryTitle"><a href="{$value.url}">{$value.title|htmlspecialchars}</a></div>
+                    {if="$value.thumbnail"}<div class="dailyEntryThumbnail">{$value.thumbnail}</div>{/if}
+                    <div class="dailyEntryDescription">{$value.formatedDescription}</div>
+                </div>
+                {/loop}
+            </div>    
+
+            <div id="daily_col3" class="4u 12u$(small)">
+                {loop="col3"}
+                <div class="dailyEntry">
+                    {if="$value.tags"}<div class="dailyEntryTags">{loop="value.taglist"}{$value|htmlspecialchars} - {/loop}</div>{/if}
+                    <div class="dailyEntryTitle"><a href="{$value.url}">{$value.title|htmlspecialchars}</a></div>
+                    {if="$value.thumbnail"}<div class="dailyEntryThumbnail">{$value.thumbnail}</div>{/if}
+                    <div class="dailyEntryDescription">{$value.formatedDescription}</div>
+                </div>
+                {/loop}
+            </div>        
+            {else}
+            <div class="nothing">Ce jour-là, Yomli a dormi.</div>
+            {/if}
+        </div>
+        <pre>
+            <code>
+|_|0|_|
+|_|_|0|
+|0|0|0|
+            </code>
+        </pre>
+
+        <div>
+            <span class="green">yomli@daily</span>
+            <span class="blue">~ $ </span>
+        </div>
+    </div>
+
+</article>
+
+{include="page.footer"}
+</body>
+</html>

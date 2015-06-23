@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>{include="includes"}</head>
+<body id="top">
+	{include="page.header"}
+
+
+	<article role="article">
+
+		<header>
+			<h2>Tags</h2>
+		</header>
+
+		<div id="cloudtag">
+			<p>
+				{loop="tags"}
+				<span>{$value.count}</span>
+				<a href="?searchtags={$key|htmlspecialchars}" style="font-size:{$value.size}pt;">{$key|htmlspecialchars}</a>
+				{/loop}
+			</p>
+		</div>
+
+	</article>
+
+	{include="page.footer"}
+</body>
+</html>

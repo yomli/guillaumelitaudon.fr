@@ -1,0 +1,23 @@
+<div id="pagination">
+	{if="isLoggedIn()"}
+	<div class="privatelinks">
+		
+		{if="$privateonly"}
+		<a href="?privateonly" class="icon fa-toggle-on" title="Voir tous les liens">
+			{else}
+			<a href="?privateonly" class="icon fa-toggle-off" title="Ne voir que les liens privés">
+				{/if}
+			</a>
+		</div>
+		{/if}
+
+		Liens par page : <a href="?linksperpage=20">20</a> <a href="?linksperpage=50">50</a> <a href="?linksperpage=100">100</a>
+		<form method="GET">
+			<input type="number" name="linksperpage" size="4" min="0" max="5000" step="1" />
+		</form>
+		<p>
+			{if="$previous_page_url"} <a href="{$previous_page_url}">&#60; Plus ancien</a> {/if}
+			<span> page {$page_current} / {$page_max} </span>
+			{if="$next_page_url"} <a href="{$next_page_url}">Plus récent &#62;</a> {/if}
+		</p>
+	</div>

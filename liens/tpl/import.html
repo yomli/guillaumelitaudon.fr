@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>{include="includes"}</head>
+<body id="top" onload="document.uploadform.filetoupload.focus();">
+	{include="page.header"}
+
+
+	<article role="article">
+
+		<header>
+			<h2>Importer des liens</h2>
+		</header>
+
+		
+		<div id="uploaddiv">
+			
+			Importer des marque-pages au format html Netscape (tels qu'exportés par Firefox/Chrome/Opera/delicious/diigo…)<br />
+			(Max : {$maxfilesize|htmlspecialchars} octets).
+			<form method="POST" action="?do=upload" enctype="multipart/form-data" name="uploadform" id="uploadform">
+				<input type="hidden" name="token" value="{$token}">
+				<input type="file" name="filetoupload" size="80">
+				<input type="hidden" name="MAX_FILE_SIZE" value="{$maxfilesize|htmlspecialchars}">
+				<input type="submit" name="import_file" value="Importer" class="button"><br>
+				<input type="checkbox" name="private" id="private"><label for="private">&nbsp;Importer tous les liens comme privés</label><br>
+				<input type="checkbox" name="overwrite" id="overwrite"><label for="overwrite">&nbsp;Remplacer les liens existants</label>
+			</form>
+			
+		</div>
+		
+
+	</article>
+
+	{include="page.footer"}
+</body>
+</html>

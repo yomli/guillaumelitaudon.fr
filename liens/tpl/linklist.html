@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>{include="includes"}</head>
+<body id="top">
+	{include="page.header"}
+
+	<section>
+
+		<header>
+			<h2>Liens</h2>
+		</header>
+
+
+		<div id="linklist">
+
+			{if="count($links)==0"}
+			<p>Aucun résultat.</p>
+			{else}
+			{if="$search_type=='fulltext'"}
+			<p>{$result_count} résultat(s) pour <strong>{$search_crits}</strong></p>
+			{/if}
+			{if="$search_type=='tags'"}
+			<p>{$result_count} résultat(s) pour le(s) tag(s) 
+				{loop="search_crits"}
+				<strong class="icon fa-tag">&nbsp;<a href="?removetag={$value|htmlspecialchars}" title="Enlever" >{$value|htmlspecialchars} <span class="icon fa-times"></span></a></strong>                                 
+				{/loop}</p>
+				{/if}
+				{/if}
+
+				<ul class="alt">
+					{loop="links"}
+					<li{if="$value.class"} class="{$value.class}"{/if}>
+					<article>
+						<header>
+							<h3 class="icon fa-link"> <a href="{$redirector}{$value.url|htmlspecialchars}">{$value.title|htmlspecialchars}</a></h3>
+							<p>
+								{$value.url|htmlspecialchars}
+							</p>
+						</header>
+						<a id="{$value.linkdate|smallHash}"></a>
+						{$value.url|thumbnail}
+						{if="$value.description"}<p class="linkdescription"{if condition="$search_type=='permalink'"} style="max-height:none !important;"{/if}>{$value.description}</p>{/if}
+						<p>
+
+							{if="!$GLOBALS['config']['HIDE_TIMESTAMPS'] || isLoggedIn()"}
+							<span class="icon fa-calendar" title="Permalien"> <a href="?{$value.linkdate|smallHash}">{$value.localdate|htmlspecialchars}</a></span> - 
+							{else}
+							<span class="linkdate" title="Permalien" class="icon fa-retweet"> <a href="?{$value.linkdate|smallHash}">permalien</a> - </span>
+							{/if}
+							<a href="http://qrfree.kaywa.com/?l=1&amp;s=8&amp;d={$scripturl|urlencode}%3F{$value.linkdate|smallHash}" 
+							onclick="showQrCode(this); return false;" data-permalink="{$scripturl}?{$value.linkdate|smallHash}" class="icon fa-qrcode" title="QR Code"></a>
+							<br />
+							{if="$value.tags"}
+
+							{loop="value.taglist"}<span class="icon fa-tag" title="Filtrer"> <a href="?addtag={$value|urlencode}">{$value|htmlspecialchars}</a></span> {/loop}
+
+							{/if}
+							{if="isLoggedIn()"}
+							<br />
+
+
+							<form method="POST" class="buttoneditform" style="display:inline-block;float:right;position:relative;margin:0; padding:0;">
+								<input type="hidden" name="lf_linkdate" value="{$value.linkdate}">
+								<input type="hidden" name="token" value="{$token}">
+								<input type="hidden" name="delete_link">
+								<input type="image" alt="Supprimer" src="images/delete_icon.png#" title="Supprimer" class="button_delete icon fa-trash" onClick="return confirmDeleteLink();">
+							</form>
+							<a href="?edit_link={$value.linkdate}" class="icon fa-edit" title="Éditer" style="display:inline-block;float:left;"></a>
+							<div class="clear"></div>
+
+							{/if}
+						</p>
+					</article>
+				</li>
+				{/loop}
+			</ul>
+
+			{include="linklist.paging"}
+
+			</div>
+		</section>
+
+		{include="page.footer"}
+		<script type="text/javascript">
+// Remove any displayed QR-Code
+function remove_qrcode()
+{ 
+	var elem = document.getElementById("permalinkQrcode");
+	if (elem) elem.parentNode.removeChild(elem);
+	return false;
+}
+
+// Show the QR-Code of a permalink (when the QR-Code icon is clicked).
+function showQrCode(caller,loading=false)
+{ 
+	// Dynamic javascript lib loading: We only load qr.js if the QR code icon is clicked:
+	if (typeof(qr)=='undefined') // Load qr.js only if not present.
+	{
+		if (!loading)  // If javascript lib is still loading, do not append script to body.
+		{
+			var element = document.createElement("script");
+			element.src = "inc/qr.min.js";
+			document.body.appendChild(element);
+		}
+		setTimeout(function() { showQrCode(caller,true);}, 200); // Retry in 200 milliseconds.
+		return false;
+	}
+
+	// Remove previous qrcode if present.
+	remove_qrcode();
+	
+	// Build the div which contains the QR-Code:
+	var element = document.createElement('div');
+	element.id="permalinkQrcode";
+	// Make QR-Code div commit sepuku when clicked:
+	if ( element.attachEvent ){ element.attachEvent('onclick', 'this.parentNode.removeChild(this);' ); } // Damn IE
+	else { element.setAttribute('onclick', 'this.parentNode.removeChild(this);' ); }
+	
+	// Build the QR-Code:
+	var image = qr.image({size: 8,value: caller.dataset.permalink});
+	if (image)
+	{ 
+		element.appendChild(image);
+		element.innerHTML+= "<br />Cliquez pour fermer";
+		caller.parentNode.appendChild(element);
+	}
+	else
+	{
+		element.innerHTML="Votre navigateur ne semble pas compatible HTML5.";
+	}
+	return false;
+}
+</script>
+</body>
+</html>
