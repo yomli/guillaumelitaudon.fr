@@ -21,6 +21,7 @@
 	<?php $plxShow->meta('author') ?>
 
 	<link rel="icon" href="<?php $plxShow->template(); ?>/img/favicon.ico" />
+	<link rel="apple-touch-icon" href="<?php $plxShow->template(); ?>/img/apple-touch-icon.png" />
 
 	<link rel="stylesheet" href="<?php $plxShow->template(); ?>/css/main.min.css" />
 	<link rel="stylesheet" href="<?php $plxShow->template(); ?>/css/style.css" />
