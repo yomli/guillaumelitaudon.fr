@@ -127,7 +127,7 @@ ul#list-items {
 
 li.item-list {
 	line-height: 142%;
-	max-height: 27px;
+	min-height: 27px;
 	cursor: pointer;
 	margin: 0;
 	overflow: hidden;
@@ -319,11 +319,6 @@ span.item-description {
 	margin:0;
 }
 
-.btn-info.previous-item,
-.btn-info.next-item {
-	display:none;
-}
-
 button,
 .btn {
 	font-size: 11pt;
@@ -387,9 +382,9 @@ button[type="submit"]:active {
 	text-decoration: underline;
 }
 
-.btn:hover,
-.btn:active,
-.btn.disabled {
+.btn3:hover,
+.btn3:active,
+.btn3.disabled {
 	background-color: transparent;
 	text-decoration: none;
 }
@@ -412,7 +407,7 @@ textarea {
 	outline: 0;
 	padding: 0 1em;
 	text-decoration: none;
-	width: 100%;
+	width: 80%;
 }
 
 input[type="text"]:invalid,
