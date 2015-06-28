@@ -1,0 +1,205 @@
+/*********************************************************************************/
+/* YomliBlog by Guillaume Litaudon                                               */
+/* guillaume.litaudon@gmail.com                                                  */
+/* User-defined style start here.                                                */
+/*********************************************************************************/
+
+
+/*********************************************************************************/
+/* Main                                                                          */
+/*********************************************************************************/
+
+#main {
+	padding-left:25px;
+	border-left: solid 1px #333;
+	background-color:#fff;
+}
+
+#page {
+	background-color:#fff;
+}
+
+@media screen and (min-width: 736px) {
+	#page {
+		background-color:#444;
+		background-image: url("../img/code.jpg"), radial-gradient( circle at center, #444 0%,#444 100%);
+		background-attachment: fixed, scroll;
+		background-position: top left, center center;
+		background-repeat: no-repeat, repeat;
+		background-size: 42%, cover;
+	}
+}
+
+#cool-img .box {
+	border:0;
+	background:transparent;
+	box-shadow: 0px 0px 4px 0px rgba(0,0,0,0);
+	box-shadow: 0px 3px 0px 0px rgba(0,0,0,0);
+}
+
+/*********************************************************************************/
+/* Content                                                                       */
+/*********************************************************************************/
+
+#content {
+	text-align: left;
+	word-wrap: break-word;
+}
+
+#content article {
+	font: 100%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#content article h2 { font-size: 2em; }
+#content article h3 { font-size: 1.5em; }
+#content article h4 { font-size: 1.17em; }
+#content article h5 { font-size: 1em; }
+#content article h6 { font-size: 0.83em; }
+
+#content article header {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+#content article > div,
+#content .last {
+	font-size:1.17em;
+	
+}
+
+#content article > div p,
+#content .last p  {
+	margin:0.4em 0px 0.8em 0px;
+	line-height:1.5;
+	padding:0;
+	-moz-font-feature-settings: "kern=1";
+	-webkit-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern";
+	font-feature-settings: "kern";
+	font-kerning: normal;
+	-webkit-font-variant-ligatures: common-ligatures;
+	font-variant-ligatures: common-ligatures;
+	-webkit-font-smoothing: antialiased;
+}
+
+@media screen and (max-width: 736px) {
+	#content, #sidebar {
+		padding-left:2em;
+		text-rendering: optimizeSpeed;
+	}
+}
+
+
+/*********************************************************************************/
+/* Home                                                                          */
+/*********************************************************************************/
+
+.article-home {
+	height:20em;
+	overflow:hidden;
+	position:relative;
+}
+.article-home:after {
+	content:' ';
+	text-align:right;
+	bottom:0;
+	right:0;
+	width:100%;
+	display:block;
+	position:absolute;
+	height:2em;
+	background : linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 75%);
+}
+
+#content .article-home div {
+	height: calc(1.1em * 1.5 * 5);
+}
+
+#content .article-home div:after {
+	height: calc(1.1em * 1.5);
+}
+
+
+#pagination {
+	text-align: center;
+	margin:20px;
+}
+
+#pagination a {
+	margin-right:5px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#pagination a.activePage {
+	font-weight: normal;
+}
+
+/*********************************************************************************/
+/* Sidebar                                                                       */
+/*********************************************************************************/
+aside ul { 
+	margin:0;
+	padding:0;
+}
+
+.tag { 
+	margin-right: 5px; 
+	display: inline-block;
+}
+
+.tag a { 
+	text-decoration: none; 
+}
+
+.tag-size-1 	{ font-size: 1em; }
+.tag-size-2 	{ font-size: 1.1em; }
+.tag-size-3 	{ font-size: 1.2em; }
+.tag-size-4 	{ font-size: 1.3em; }
+.tag-size-5 	{ font-size: 1.4em; }
+.tag-size-6 	{ font-size: 1.5em; }
+.tag-size-7 	{ font-size: 1.6em; }
+.tag-size-8 	{ font-size: 1.7em; }
+.tag-size-9 	{ font-size: 1.8em }
+.tag-size-10 	{ font-size: 1.9em; }
+.tag-size-max 	{ font-size: 2em; }
+
+
+/*********************************************************************************/
+/* Article                                                                       */
+/*********************************************************************************/
+
+#content article footer span {
+	margin-right:1em;
+}
+
+#content article footer {
+	margin-top:1em;
+}
+
+.info_comment, .content_com {
+	font-style:normal;
+	word-wrap: break-word;
+}
+
+/*********************************************************************************/
+/* Plugins                                                                       */
+/*********************************************************************************/
+
+#searchpool .sp-tags, #searchpool > legend {
+	display:none;
+}
+
+#searchpool #btn_add_date, #searchpool #btn_add_text {
+	margin:1em 0;
+}
+
+#searchlist > legend, #searchresult > legend {
+	margin:1em 0;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.nav:before {
+	content:"\f0c9";
+}

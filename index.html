@@ -274,10 +274,12 @@
 						<p>Sinon, n'hésitez pas à m'envoyer un message en complétant ce formulaire et je vous répondrai dans les meilleurs délais.</p>
 						<form autocomplete="on" action="./assets/php/contact.php" method="post" id="contact-form" class="row uniform">
 							<div class="6u 12u$(small)">
-								<input name="contact-username" id="contact-username" required="required" type="text" placeholder="Nom" />
+								<label for="contact-username" class="icon fa-user"> Nom</label>
+								<input name="contact-username" id="contact-username" required="required" type="text" />
 							</div>
 							<div class="6u 12u$(small)">
-								<input name="contact-email" id="contact-email" required="required" type="email" placeholder="Courriel" />
+								<label for="contact-email" class="icon fa-envelope"> Courriel</label>
+								<input name="contact-email" id="contact-email" required="required" type="email" />
 							</div>
 							<div class="12u hidden">
 								<input name="contact-website" id="contact-website" type="url" />
@@ -287,7 +289,8 @@
 								<input name="contact-subject" id="contact-subject" type="text" />
 							</div>
 							<div class="12u">
-								<textarea name="contact-message" id="contact-message" required="required" placeholder="Message"></textarea>
+								<label for="contact-message" class="icon fa-edit"> Message</label>
+								<textarea name="contact-message" id="contact-message" required="required"></textarea>
 							</div>
 
 							<div class="12u">
@@ -313,7 +316,6 @@
 	<!-- Footer -->
 	<footer id="footer">
 		<div class="copyright">
-
 			Hébergé par <br />
 			<a href="https://www.gandi.net/"><img src="./assets/img/gandi.svg" alt="Gandi" /></a>
 		</div>
