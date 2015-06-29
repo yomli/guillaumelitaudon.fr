@@ -14,14 +14,11 @@
     							
 /* THANKS */
 
-	Moxie Nethack: Krister Lagerström
-	GitHub: kl7107
-
 	Special thanks to my family for their continued support.
 
 /* SITE */
 
 	Doctype: HTML5
 	Componants: jQuery, Skel Baseline
-	CMS: PluXML, Shaarli
-	IDE: Sublime Text, The GIMP, Inkscape, FileZilla
+	CMS: PluXML, Shaarli, Kriss_Feed
+	IDE: Sublime Text, The GIMP, Inkscape, FileZilla, Git
