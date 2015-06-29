@@ -1,0 +1,13 @@
+﻿/* TEAM */
+	Web Dev, Web Design : Guillaume Litaudon
+	Site: http://www.guillaumelitaudon.fr/
+	Location: Tours, France
+  
+ /* THANKS */
+	Names : Igor Sorokine (beta-test)
+  
+  
+/* SITE */
+	Standards: HTML5, CSS3, PHP5
+	Components: Bootstrap, OwnCloud
+	Software: JetStrap, Notepad++

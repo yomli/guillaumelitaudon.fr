@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>La Dive Bouteille - Connexion</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="themes/responsive/core/img/favicon.png" />
+	<link rel="apple-touch-icon-precomposed" href="themes/responsive/core/img/favicon-touch.png" />
+
+	<link rel="stylesheet" href="themes/responsive/core/css/styles.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="themes/responsive/core/css/bootstrap.min.css" >
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="themes/responsive/core/js/js.js"></script>
+
+	<style>
+		@import url(http://fonts.googleapis.com/css?family=Jacques+Francois);
+		@import url(http://fonts.googleapis.com/css?family=IM+Fell+English+SC&amp;text=La%20Dive%20Bouteille);
+		#owncloud { font-family: 'IM Fell English SC', serif; line-height:40px;font-size:4em;
+		margin:20px 5px; color:#555;} .jacques { font-family: 'Jacques Francois', serif; color:#555;}
+		nav { margin-top:65px; height:50%;} #copyright { margin-left:25px;}
+		.navbar-inner, .navbar, .navbar-fixed-top, .container-fluid { background-color:#fff; }
+		.navbar .nav > .active > a { background:#555; } .navbar .nav > li > a:hover { background:#555; }
+		.navbar .nav > li > a { color:#555;} #body-login #login #header {height:5em; background-color:#fff; background-image:none; border:none; box-shadow:0 1px 3px rgba(0, 0, 0, 0.25), 0 -1px 0 rgba(0, 0, 0, 0.1) inset;} #content {margin-top:70px;} #content #controls {margin-top:65px;}
+		#new, .file_upload_filename, input[type="submit"], input[type="submit"]:hover { color:#fff; font-weight:normal; padding:2px 5px 3px 5px; margin-top:5px; background: none repeat scroll 0 0 #0074CC; -webkit-border-radius:0;-moz-border-radius:0;border-radius:0;border-color:#ccc;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25); *background-color:#05c;background-image:-ms-linear-gradient(top,#08c,#05c);background-image:-webkit-gradient(linear,0 0,0 100%,from(#08c),to(#05c));background-image:-webkit-linear-gradient(top,#08c,#05c);background-image:-o-linear-gradient(top,#08c,#05c);background-image:-moz-linear-gradient(top,#08c,#05c);background-image:linear-gradient(top,#08c,#05c);background-repeat:repeat-x;border-color:#05c #05c #003580;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);filter:progid:dximagetransform.microsoft.gradient(startColorstr='#0088cc',endColorstr='#0055cc',GradientType=0);filter:progid:dximagetransform.microsoft.gradient(enabled=false)} .file_upload_wrapper{margin-top:5px;} .file_upload_filename{ padding-right:8px; padding-bottom:2px;} #settings {bottom:8.5em;} 
+		.searchbox2 { position:absolute; top:5px; right:20px;} #login {background-color:#fff; border-bottom-color:#fff;} .infield {position:relative; top:-0.6em;} #login-form {position:relative; top:5em;} #body-login { background-color:#fff;} #submit {margin-right:20px;}
+	</style>
+</head>
+
+<body id="body-login">
+	<div id="login">
+		<header id="header">
+			<div class="navbar navbar-fixed-top">
+				<div class="navbar-inner">
+					<div class="container-fluid">
+						<a href="../index.html" title="" id="owncloud" class="brand">La Dive Bouteille</a>
+						<ul class="nav">
+							<li>
+								<a class="jacques" href="../index.html">
+									Accueil
+								</a>
+							</li>
+							<li class="active">
+								<a class="jacques" href="#">
+									Connexion
+								</a>
+							</li>
+							<li>
+								<a class="jacques" href="../contact.html">
+									Contact
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--[if IE 8]><style>input[type="checkbox"]{padding:0;}</style><![endif]-->
+		<form action="index.php" method="post" id="login-form">
+			<fieldset>
+				<input type="hidden" name="redirect_url" value="" />				<p class="infield jacques">
+				<label for="user" class="infield">Nom d'utilisateur</label>
+				<input type="text" name="user" id="user" class="jacques" value="" autofocus autocomplete="off" required />
+			</p>
+			<p class="infield">
+				<label for="password" class="infield jacques">Mot de passe</label>
+				<input type="password" name="password" id="password" class="jacques" value="" required  />
+				<input type="hidden" name="sectoken" id="sectoken" value="7110700"  />
+			</p>
+			<input type="checkbox" name="remember_login" value="1" id="remember_login" /><label for="remember_login" class="jacques" id="label_remember">se souvenir de moi</label>
+			<input type="submit" id="submit"  class="login jacques" value="Connexion" />
+		</fieldset>
+	</form>
+</div>
+<hr>
+<div id="copyright" class="jacques">
+	<p>
+		<span class="st">
+			© La Dive Bouteille 2012 - <a href="../mentions.html">Mentions légales</a>
+		</span>
+	</p>
+</div>
+</body>
+</html>

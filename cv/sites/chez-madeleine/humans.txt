@@ -1,0 +1,13 @@
+﻿/* TEAM */
+	Web Dev, Web Design : Guillaume Litaudon
+	Site: http://guillaume.litaudon.tk/
+	Location: Tours, France
+  
+ /* THANKS */
+	Names : Claire Cantin, Christina Litaudon
+  
+  
+/* SITE */
+	Standards: HTML5, CSS3, PHP5
+	Components: Picoloblog, CSS3PIE, Asamusak TextShadow , Aloha Editor
+	Software: The Gimp, Notepad++, Bitnami WampStack (yes, that's all !)

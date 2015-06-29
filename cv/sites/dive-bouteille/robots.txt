@@ -1,0 +1,5 @@
+# robots.txt for La Dive Bouteille
+User-agent: *
+Disallow: /owncloud
+Disallow: /contact.html
+Disallow: /assets
