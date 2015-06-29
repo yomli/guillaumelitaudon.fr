@@ -19,7 +19,7 @@ include(dirname(__FILE__).'/header.php');
 	<div id="main" class="9u 12u$(small)">
 		<div class="row 100%">
 
-			<div id="content" class="8u 12u$(xsmall) important(collapse)">
+			<div id="content" class="9u 12u$(xsmall) important(collapse)">
 
 				<article role="article" id="static-page-<?php echo $plxShow->staticId(); ?>">
 
