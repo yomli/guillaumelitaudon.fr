@@ -1,8 +1,11 @@
 # robotstxt.org/
 
+Sitemap: http://www.guillaumelitaudon.fr/sitemap.xml
+
 User-agent: *
 Disallow: /outils
 Disallow: /assets
 Disallow: /workspace
 Disallow: /cv
 Disallow: /cv/sites
+Disallow: /cv_old
