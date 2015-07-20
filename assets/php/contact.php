@@ -17,8 +17,14 @@ if(isset($_POST["contact-username"]) && isset($_POST["contact-email"]) && isset(
 	else
 		$sujet = "[guillaumelitaudon.fr] : Un nouveau message du site guillaumelitaudon.fr";
 
-	$header = "From: \"".$_POST["contact-username"]."\"<".$_POST["contact-email"].">".$passage_ligne;
-	$header.= "Reply-to: \"".$_POST["contact-username"]."\" <".$_POST["contact-email"].">".$passage_ligne;
+	if($_POST["contact-username"] && !preg_match( "/[\r\n]/", $_POST["contact-email"])) {
+        $contactEmail = "From: " . $_POST["contact-email"];     
+    } else {
+        $contactEmail = "From: " . $mail; 
+    }
+
+	$header = "From: \"".$_POST["contact-username"]."\"<".$contactEmail.">".$passage_ligne;
+	$header.= "Reply-to: \"".$_POST["contact-username"]."\" <".$contactEmail.">".$passage_ligne;
 	$header.= "MIME-Version: 1.0".$passage_ligne;
 	$header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
 
@@ -34,10 +40,15 @@ if(isset($_POST["contact-username"]) && isset($_POST["contact-email"]) && isset(
 	$message.= $passage_ligne."--".$boundary."--".$passage_ligne;
 	$message.= $passage_ligne."--".$boundary."--".$passage_ligne;
 
-	if(mail($mail,$sujet,$message,$header))
+	if(isset($_POST["contact-url"]) && $_POST["contact-url"] == '') {
+		if(mail($mail,$sujet,$message,$header))
+			echo "Votre message a été envoyé.";
+		else
+			echo "Votre message n'a pas été envoyé.";		
+	} else {
 		echo "Votre message a été envoyé.";
-	else
-		echo "Votre message n'a pas été envoyé.";
+	}
+
 }
 else {
 	echo "Votre message n'a pas été envoyé, vous avez oublié de remplir un champ du formulaire.";
